@@ -95,4 +95,26 @@ input[type="password"]:focus, input[type="text"]:focus {
     transform: translate(-50%, -50%); /* Ajusta el centro exacto del propio elemento */
     width: 120px;
     border-radius: 300px;
+<<<<<<< HEAD
+=======
+}
+
+.pop-up {
+    position: absolute;
+    top: 50%;                    /* Desplaza el borde superior al 50% de la pantalla */
+    left: 50%;                   /* Desplaza el borde izquierdo al 50% de la pantalla */
+    transform: translate(-50%, -50%); /* Ajusta el centro exacto del propio elemento */
+    
+    /* 2. Estilos visuales de la tarjeta */
+    background-color: rgb(250, 252, 255);
+    padding: 20px;
+    border-radius: 3px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 160px;
+    text-align: center;
+}
+
+.pop-up-content h2{
+    color: #520e0e;
+>>>>>>> 7131217 (Cambio de direccion)
 }

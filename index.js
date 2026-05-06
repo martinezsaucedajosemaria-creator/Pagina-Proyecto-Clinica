@@ -1,4 +1,5 @@
 const formulario = document.getElementById('formlogin');
+<<<<<<< HEAD
 const inputusuario = document.getElementById('usuario');
 const inputpass = document.getElementById('pass');
 
@@ -16,3 +17,29 @@ formulario.addEventListener('submit', function(evento) {
         window.location.href = "dashboard.html";
     }
 });
+=======
+
+formulario.addEventListener('submit', function(e) {
+    e.preventDefault();
+
+    let formData = new FormData(formulario);
+
+    fetch("login.php", {
+        method: "POST",
+        body: formData
+    })
+    .then(res => res.text())
+    .then(data => {
+
+        if (data === "ok") {
+            window.location.href = "dashboard.html";
+        } 
+        else if (data === "pass_error") {
+            mostrarError("Contraseña incorrecta");
+        } 
+        else if (data === "user_error") {
+            mostrarError("Usuario no existe");
+        }
+    });
+});
+>>>>>>> 7131217 (Cambio de direccion)
